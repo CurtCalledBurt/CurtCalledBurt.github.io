@@ -12,11 +12,24 @@ Fortunately, board games really are the kings of this marriage of simplicity and
 
 All of this leads me to the following [website](https://quanticfoundry.com/2017/04/27/board-gaming-motivations/), which polled 90,000 board gamers and asked them why they played games. I wasn't surprised by most of what this website said or found. What was surprising was when I accessed a relatively large data set from BoardGameGeek, I found that a surprising number of board games are single player. That fit with none of my expecations. I don't play board games to be alone. I play to socialize, or beat other players, and quanticfoundry's poll doesn't contradict my intuition when generalizing my tastes to the general board game buying public I don't think. But BoardGameGeek's data did (at first glance). So I wanted to do some basic digging.
 
-So I did a little statistics with the stats from BoardGameGeek, I counted the number of owners of games with a single player option and plotted them as a histogram.
+So first I wanted to find out if people liked games with that single player option more. So when I counted how people rated games with a single player option vs. non-single player counterparts we see this: 
+
+![Single player owners](/img/owner_average_bayes_singleplayer.png)
+
+![Non Single player owners](/img/owner_average_bayes_singleplayer)
+
+Which we can see pretty much with our eye alone that people rate games with a single-player option higher.
+
+When we run a two sample t-test, just to be sure, we get a ridiculously low p-value of p = 5.98e-09. So the math agrees that the odds that games with a single-player variant do rate higher among consumers.
+
+But, does that mean that those games sell better?
+
+So gaming companies don't really like giving out sales numbers, which I guess is understandable. But fortunately the dataset we were using also had a column numbering how many people OWNED a given game, so we can use that as a replacement for actual sale numbers.
+
+I counted the number of owners of games with a single player option and plotted them as a histogram.
 
 ![Single player owners](/img/owners_singleplayer_histogram.png)
 
 ![Non Single player owners](/img/owners_nonsingleplayer_histogram.png)
 
-You can see that more people own copies of games with a single player option. If you test this with a two sample t-test, you get a statistically significant result of p = 0.00135. So, for now it seems to me that people like having a single player option.
-
+And you can still see that more people own copies of games with a single player option. If you test this with a two sample t-test, you get a statistically significant result of p = 0.00135. So, for now it seems to me that people like having a single player option.

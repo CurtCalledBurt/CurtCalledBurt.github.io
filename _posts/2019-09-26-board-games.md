@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Do We Like Playing Board Games Alone?
-
+image: /img/owners_singleplayer_histogram.png
 ---
 
 I like board games mostly because they give me an excuse to hang out with my friends and have fun at the same time. Because of that, I highly value games with a simple rule set, something I can explain in 10 minutes or less and then get the game moving. Because of that, I really like games that are simple to play with relatively simple rules. Now you might think that means I don't have many complex games, and that's wrong. Really well designed games can have really simple moment to moment gameplay, but are complex enough that the optimal way to win is about as obvious as a solving world hunger (see the relatively new game "Azul" for a good example of this. In "Azul" every player only has 1 move they can make for the entire game, and yet it is very difficult to know how to win).

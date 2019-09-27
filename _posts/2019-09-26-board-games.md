@@ -14,7 +14,7 @@ All of this leads me to the following [website](https://quanticfoundry.com/2017/
 
 So I did a little statistics with the stats from BoardGameGeek, I counted the number of owners of games with a single player option and plotted them as a histogram.
 
-![Single player owners](/Users/curtismckendrick/Downloads/owners_singleplayer_histogram.png)
+![Single player owners](owners_singleplayer_histogram.png)
 
 ![Non Single player owners](/Users/curtismckendrick/Downloads/owners_nonsingleplayer_histogram.png)
 

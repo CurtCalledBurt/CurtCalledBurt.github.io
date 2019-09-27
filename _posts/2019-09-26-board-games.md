@@ -16,7 +16,7 @@ So first I wanted to find out if people liked games with that single player opti
 
 ![Single player owners](/img/owner_average_bayes_singleplayer.png)
 
-![Non Single player owners](/img/owner_average_bayes_singleplayer)
+![Non Single player owners](/img/owner_average_bayes_nonsingleplayer.png)
 
 Which we can see pretty much with our eye alone that people rate games with a single-player option higher.
 

@@ -14,12 +14,9 @@ All of this leads me to the following [website](https://quanticfoundry.com/2017/
 
 So I did a little statistics with the stats from BoardGameGeek, I counted the number of owners of games with a single player option and plotted them as a histogram.
 
-![Single player owners][Single] 
+![Single player owners](/Users/curtismckendrick/Downloads/owners_singleplayer_histogram.png)
 
-![Non Single player owners][NonSingle]
+![Non Single player owners](/Users/curtismckendrick/Downloads/owners_nonsingleplayer_histogram.png)
 
 You can see that more people own copies of games with a single player option. If you test this with a two sample t-test, you get a statistically significant result of p = 0.00135. So, for now it seems to me that people like having a single player option.
 
-
-[Single]: /Users/curtismckendrick/Downloads/owners_singleplayer_histogram.png
-[NonSingle]: /Users/curtismckendrick/Downloads/owners_nonsingleplayer_histogram.png

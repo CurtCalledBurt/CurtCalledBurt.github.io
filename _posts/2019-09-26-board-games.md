@@ -10,12 +10,16 @@ And it's this combination of simplicity with complexity I value because, as the 
 
 Fortunately, board games really are the kings of this marriage of simplicity and complexity, and that's probably due to their limitations. They can't be as complicated as a video game because boardgames can't have any automated parts or calculations. If you want a board game simulation of ruling a kingdom in Europe, you're not going to find something like "Crusader Kings" (which has so many numbers and values that I suspect some of them must secretly be meaningless), you're going to find something like "Scythe." Though, some video games do try out the "simple to play, complex to win" mentality of board games (see "Into the Breach," this game could quite literally be pulled out of your computer and put onto your table without any of the core rules or mechanics needing to be changed). This is why limitations and restrictions are, in my mind, a bit underrated as a creative tool, but that's another story for another day. 
 
-All of this leads me to the following website, which polled 90,000 board gamers and asked them why they played games: https://quanticfoundry.com/2017/04/27/board-gaming-motivations/. I wasn't surprised by most of what this website said or found. What was surprising was when I accessed a relatively large data set from BoardGameGeek, I found that a surprising number of board games are single player. That fit with none of my expecations. I don't play board games to be alone. I play to socialize, or beat other players, and quanticfoundry's poll doesn't contradict my intuition when generalizing my tastes to the general board game buying public I don't think. But BoardGameGeek's data did (at first glance). So I wanted to do some basic digging.
+All of this leads me to the following [website](https://quanticfoundry.com/2017/04/27/board-gaming-motivations/), which polled 90,000 board gamers and asked them why they played games. I wasn't surprised by most of what this website said or found. What was surprising was when I accessed a relatively large data set from BoardGameGeek, I found that a surprising number of board games are single player. That fit with none of my expecations. I don't play board games to be alone. I play to socialize, or beat other players, and quanticfoundry's poll doesn't contradict my intuition when generalizing my tastes to the general board game buying public I don't think. But BoardGameGeek's data did (at first glance). So I wanted to do some basic digging.
 
 So I did a little statistics with the stats from BoardGameGeek, I counted the number of owners of games with a single player option and plotted them as a histogram.
 
-image: \img\owners_singleplayer_histogram.png
+![Single player owners][Single] 
 
-image: \img\owners_nonsingleplayer_histogram.png
+![Non Single player owners][NonSingle]
 
 You can see that more people own copies of games with a single player option. If you test this with a two sample t-test, you get a statistically significant result of p = 0.00135. So, for now it seems to me that people like having a single player option.
+
+
+[Single]: \img\owners_singleplayer_histogram.png
+[NonSingle]: \img\owners_nonsingleplayer_histogram.png

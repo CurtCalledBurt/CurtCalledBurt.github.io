@@ -11,7 +11,7 @@ Now, it is actually fairly easy to get a machine to make predictions like this t
 
 So today I'm going to take you through my journey of trying to figure out a problem that I was blind to because of the visualizations I chose. You will see these lead me to wrong conclusions, that I then justify to myself, which will then lead to more wrong visualiaztions which will lead me to more wrong and eventually contradictory conclusions, until (finally!) I try a different, more basic, graph and realize what I've been doing wrong the whole time. 
 
-And again to reiterate, I will do all of this bad thinking while still having a model that makes pretty accurate predictions. I cannot stress this enough, for most of my time working with this dataset I had the completely wrong idea about what the data meant, its implications on the real world, and I was still using the computer to predict the average rating of a given board game to a pretty reliable degree. 
+To reiterate, I will do all of this bad thinking while still having a model that makes pretty accurate predictions. I cannot stress this enough, for most of my time working with this dataset I had the completely wrong idea about what the data meant, its implications on the real world, and I was still using the computer to predict the average rating of a given board game to a pretty reliable degree. 
 
 So, that said, are you ready to begin?
 
@@ -22,11 +22,11 @@ Now, if you had a boardgame that a bunch of internet user's rated on a scale of 
 Answer (according to this BAD visualization):
 ![](/img/BoardGamePermutationMatrix.png)
 
-The thing you want to base your guess on is just the total number of people who rated the game. By a country mile that is most the important column to look at. The score of the next closest column is about 1/20th as high. Nothing else even comes close to being as important as the number of ratings a game gets.
+According to this table, what you want to base your guess on is just the total number of people who rated the game. By a country mile that is most the important column to look at. The score of the next closest column is about 1/20th as high. Nothing else even comes close to being as important as the number of ratings a game gets.
 
 Now ask yourself why that makes sense. Because that's what I did, and this is what I came up with,
 
-The number of people who rated a game probably correlates to how many people own the game and therefore can be used as a measure of how popular it is, and if a game is popular (outside of the hopefully dying exceptions of Risk and Monopoly, man are those games terribly designed) it's probably good, and therefore will probably have a high rating. It's not often that a lot of people both own something and detest it at the same time after all. The thing, we already knew how many people owned the game! That was data the computer had, and the computer decided to ignore it! And looking back at the table, it's not even in the top 5! It's 7th out of 14!
+The number of people who rated a game probably correlates to how many people own the game and therefore can be used as a measure of how popular it is, and if a game is popular (outside of the hopefully dying exceptions of Risk and Monopoly, man are those games terribly designed) it's probably good, and therefore will probably have a high rating. It's not often that a lot of people both own something and detest it at the same time after all. The thing, we already knew how many people owned the game! That was data the computer had, and the computer decided to ignore it! Looking back at the table, it's not even in the top 5! It's 7th out of 14!
 
 That was my justification for that table I just showed you. My thinking was long, convuluted, and made a bunch of assumptions that I had no data to back. Bad, bad, bad practise all around.
 
@@ -38,11 +38,11 @@ Now take a look at this:
 
 On the left is the actual board game rating averages plotted against how many people rated the game, on the right is our model's prediction of the average rating based on all the data I gave it. Also note that this is a scatter plot, that will also become relevent a little later.
 
-And just looking at this, our model looks pretty good (which is NOT necessarily an indicator you are doing things right)! Just giving it a glance over shows it does a pretty good job at predicting a game's average rating. There are a couple of visible flaws but overall it looks pretty good. And here's where my bias comes in.
+Just looking at this graph, our model looks pretty good (which is NOT necessarily an indicator you are doing things right)! Just giving it a glance over shows it does a pretty good job at predicting a game's average rating. There are a couple of visible flaws but overall it looks pretty good. And here's where my bias comes in.
 
-I don't like ratings systems. The idea of "I am going to quanitify all possible variables and measures of fun and enjoyment and quality down into one number for an entire field of products and rank them in order down to the very last," just seems silly, impossible, and completely disregards that we humans have different taste in games, and in things generally. What I especially don't like is that for some reason we've decided that '7' is average on scales from 1 to 10. It drives me nuts it isn't '5.' When someone says, "It's alright I guess, I'll give it a 7," I feel that internet compulsion to tell them they're wrong. I ignore it (usually) but still I hate it!
+I don't like ratings systems. The idea of "I am going to quanitify all possible variables and measures of fun and enjoyment and quality down into one number for an entire field of products and rank them in order down to the very last," just seems silly, impossible, and completely disregards how we humans have different taste in games and in all things generally. What I especially don't like is that for some reason we've decided that '7' is average on scales from 1 to 10. It drives me nuts it isn't '5.' When someone says, "It's alright I guess, I'll give it a 7," I feel that internet compulsion to tell them they're wrong. I ignore it (usually) but still I hate it!
 
-And wouldn't you know, the average rating as the number of humans who rated a game hovers at, you guessed it, (well, I guess  you wouldn't technically be guessing at this point, you know, since you... saw it... because I showed you) a 7! Hooray, bias confirmed! So humans are weird, and therefore the data is weird too because of some connection back to human brains and how they rank things being bad and not helpful. HA HA I AM SO RIGHT ABOUT THIS!!!
+So given that little human nudge towards 7 wouldn't you know, the average rating as the number of humans who rated a game hovers at, you guessed it, (well, I guess  you wouldn't technically be guessing at this point, you know, since you... saw it... because I showed you) a 7! Hooray, bias confirmed! So humans are weird, and therefore the data is weird too because of some connection back to human brains and how they rank things being bad and not helpful. HA HA I AM SO RIGHT ABOUT THIS!!!
 
 Except this is all bogus (well all except the part where there is no objective ranking). So what if the average goes to 7? 
 That is what a large data set of averages is mathematically always going to do! By the Central Limit Theorem we expect a group of averages to approach a normal distrubution eventually, and, even though this isn't a histogram what we roughly see here is a normal distribution.
@@ -67,9 +67,9 @@ Look at how many games have 0 ratings (technically this one shows all values clo
 So the most common average rating is 0, and the most common number of raters is 0.
 
 Going into this in a more exact fashion we see that the total number of games with a 0 average rating is 24361.
-And if we count up the number of games with no ratings at all how many do we find? 24361.
+We then count up the number of games with no ratings at all and how many do we find? 24361.
 
-Why are these numbers EXACTLY the same? Because the average rating of a game that has no ratings at all defaults to 0.
+Why are these numbers EXACTLY the same? This is the crux of the solution to my problem. Because the average rating of a game that has no ratings at all defaults to 0.
 
 That's 24361 games out of a dataset that, when we delete repeated games, has a total of 79463 games logged in it. That's 30% of all the games in the dataset that have this property.
 

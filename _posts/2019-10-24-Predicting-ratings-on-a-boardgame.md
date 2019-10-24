@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualizations in Machine Learning
+title: Visualizations of Machine Learning
 subtitle: The Wrong Way and then the Right Way
 image: /img/BoardGamePostImage.png
 ---

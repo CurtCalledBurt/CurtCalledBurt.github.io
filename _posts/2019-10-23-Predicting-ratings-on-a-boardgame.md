@@ -18,7 +18,7 @@ To start figuring out what my model was doing with the data I was feeding it, I 
 
 Now, if you had a boardgame that a bunch of internet user's rated on a scale of 1 to 10, which of the following things about the game do you think would be most important to know when guessing how high the average user rating of a game would be: the year the game was made, the minimum numbers of players, the max number of players, how long the game takes, the minimum recommended age, the total number of people who rated the game, the total number of owners of the game, the total number of people who want to buy the game, or how complex the game is?
 
-Answer (according to this secretly BAD visualization):
+Answer (according to this BAD visualization):
 ![Permutation Matrix](/img/BoardGamePermutationMatrix.png)
 
 The thing you want to base your guess on is just the total number of people who rated the game. By a country mile that is most the important column to look at. The score of the next closest column is about 1/20th as high. Nothing else even comes close to being as important as the number of ratings a game gets.
@@ -33,7 +33,7 @@ And I never questioned this! I saw that table and thought, "Huh, that's weird, h
 
 Now take a look at this:
 
-[Board Game Side by Side](/img/BoardGameSideBySide.png)
+![Board Game Side by Side](/img/BoardGameSideBySide.png)
 
 On the left is the actual board game rating averages plotted against how many people rated the game, on the right is our model's prediction of the average rating based on all the data I gave it. Also note that this is a scatter plot, that will also become relevent a little later.
 

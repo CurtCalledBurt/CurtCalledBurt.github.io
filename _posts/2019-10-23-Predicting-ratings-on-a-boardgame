@@ -1,0 +1,29 @@
+---
+layout: post
+title: Predicting the Ratings of a Boardgame
+---
+
+Since messing with the boardgame dataset from last time, I have discovered that the original purpose of the dataset was to train a computer to predict how highly users would rate each game. Having discovered that, and also having recently learned how to train a computer to do look at datasets such as this and make predictions from it, I decided to try my hand at this dataset's original purpose. 
+
+Jumping right in, it's really hard to show simple graphs of what a computer does when you run a machine learning algorithmn on it and it's spitting out predictions. There are whole libaries in various computer languages dedicated exclusively to visually expressing what the computer is doing when it says "X boardgame will have an average rating of Y." It is actually fairly easy to get a machine make predictions like this that are reasonably accurate. Much more difficult is figuring out how it's making those predictions.
+
+So to start, we are going to look at what is called a permutation matrix. This is essentially a measure of how important each feature of the data is to the computer's predictions. The higher the number on a column, the more sway that column has over the computer's predictions. 
+
+Now, if you had a boardgame that a bunch of internet user's rated on a scale of 1 to 10, which of the following things about the game do you think would be most important to know when guessing how high the average user rating of a game would be: the year the game was made, the minimum numbers of players, the max number of players, how long the game takes, the minimum recommended age, the total number of people who rated the game, the total number of owners of the game, the total number of people who want to buy the game, or how complex the game is?
+
+Answer:
+![Permutation Matrix](/img/BoardGamePermutationMatrix.png)
+
+The thing you want to base your guess on is just the total number of people who rated the game. By a country mile that is most the important column to look at. The score of the next closest column is about 1/20th as high. Nothing else even comes close to being as important as the number of ratings a game gets.
+
+Which initially doesn't make sense. When asking ourselves, "What would make for a good indicator that a boardgame is good (and therefore a game that will be highly rated)?" the number of ratings doesn't seem to have a direct connection to that. We might be able to reason our way there though, because the number of people who rated a game, it stands to reason, correlates to how many people own the game and therefore can be used as a measure of how popular it is, and if a game is popular (outside of the hopefully dying exceptions of Risk and Monopoly, man are those games terribly designed) it's probably good, and therefore will probably have a high rating. It's not often that a lot of people both own something and detest it at the same time after all. The thing, we already knew how many people owned the game! That was data the computer had, and the computer decided to ignore it! And looking back at the table, it's not even in the top 5! It's 7th out of 14!
+
+So what the heck is going on here?
+
+Well, I think a rating has a lot more to say about how the human brain works than about how good the thing being rated is.
+
+Take a look at this:
+
+######
+
+

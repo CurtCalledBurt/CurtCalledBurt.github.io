@@ -39,18 +39,19 @@ On the left is the actual board game rating averages plotted against how many pe
 
 And just looking at this, our model looks pretty good (which is NOT necessarily an indicator you are doing things right)! Just giving it a glance over shows it does a pretty good job at predicting a game's average rating. There are a couple of visible flaws but overall it looks pretty good. And here's where my bias comes in.
 
-I don't like ratings systems. The idea of "I am going to quanitify all possible variables and measures of fun and enjoyment and quality down into one number for an entire field of products and rank them in order down to the very last," just seems silly, impossible, and completely disregards that we humans have different taste in games, and in things generally. What I espeically don't like is that for some reason we've decided that '7' is average on scales from 1 to 10. It drives me nuts it isn't '5.' When someone says, "It's alright I guess, I'll give it a 7," I feel that internet compulsion to tell them they're wrong. I ignore it (usually) but still.
+I don't like ratings systems. The idea of "I am going to quanitify all possible variables and measures of fun and enjoyment and quality down into one number for an entire field of products and rank them in order down to the very last," just seems silly, impossible, and completely disregards that we humans have different taste in games, and in things generally. What I especially don't like is that for some reason we've decided that '7' is average on scales from 1 to 10. It drives me nuts it isn't '5.' When someone says, "It's alright I guess, I'll give it a 7," I feel that internet compulsion to tell them they're wrong. I ignore it (usually) but still I hate it!
 
 And wouldn't you know, the average rating as the number of humans who rated a game hovers at, you guessed it, (well, I guess  you wouldn't technically be guessing at this point, you know, since you... saw it... because I showed you) a 7! Hooray, bias confirmed! So humans are weird, and therefore the data is weird too because of some connection back to human brains and how they rank things being bad and not helpful. HA HA I AM SO RIGHT ABOUT THIS!!!
 
 Except this is all bogus (well all except the part where there is no objective ranking). So what if the average goes to 7? 
 That is what a large data set of averages is mathematically always going to do! By the Central Limit Theorem we expect a group of averages to approach a normal distrubution eventually, and (even though this isn't a histogram, more on that later) what we roughly see here is a normal distribution. This isn't a result based on how humans behave, it's a natural outcome of the way math works.
 
-So the Central Limit Theorem along with human's liking 7 mostly explains the averaging to 7 as the number of ratings increases, but what about that first table? Why is the model so obsessed with looking at the number of ratings to determine what its prediction is going to be? The answer, is in the histogram, the most basic of plots, and the one I should have started with. 
+So the Central Limit Theorem along with human's liking 7 mostly explains the averaging to 7 as the number of ratings increases, but what about that first table? Why is the model so obsessed with looking at the number of ratings to determine what its prediction is going to be? The answer is in the histogram, the most basic of plots, and is the plot I should have started with. 
 
-So here she is. I give you the rock that was thrown at my glass castle, the histogram: 
+So here she is. I give you the rock that was thrown at my glass castle, the humble histogram: 
 
 ![Average rating histogram](/img/BoardGameAverageRatingHistogram.png)
+
 All this does is count the total number of each unique average rating.
 Look at how many games have an average rating of 0.
 
@@ -58,24 +59,22 @@ Now look at this next histogram:
 
 ![Users rated](/img/BoardGameUsersRatedHistogram.png)
 
-Look at how many games have 0 ratings.
+Look at how many games have 0 ratings (technically this shows all values close to zero, but the zeroes are the majority of that huge blue bar you see there).
 
 The most common average rating is 0, and the most common number of raters is 0.
 
 Going into this in a more exact fashion we see that the total number of games with a 0 average rating is 24361.
-And if we count up the number of games with no rateings at all how many do we find? 24361.
+And if we count up the number of games with no ratings at all how many do we find? 24361.
 
-Why are these numbers EXACTLY the same? Because the average rating of a game that has no ratings at all defaults to 0. Every game that got no ratings has an average rating of 0. 
+Why are these numbers EXACTLY the same? Because the average rating of a game that has no ratings at all defaults to 0. Every game that got no ratings just has its average rating set to 0. 
 
-That's 24361 games out of a dataset that, when we delete repeated games, has a total of 79463 games logged in it. That's 30% of all the games in the set that have this property.
-
-A huge number of average ratings can be predicted by knowing one number: the number of people who rated the game. And not by anything tricky or clever. Just by plain and simple math. 
+That's 24361 games out of a dataset that, when we delete repeated games, has a total of 79463 games logged in it. That's 30% of all the games in the dataset that have this property.
 
 Where are these 24361 games on the scatter plot you might ask? Layered over the top of eachother at the origin, because that is how scatter plots work. Scatter plots show spread, not count. In this case 30% of our data (when looking at users rated vs. average rating) is (0, 0) and so the scatter plot puts almost a third of data at that one point in the plot.
 
-Given all of this, of course the number of ratings is weighted so heavily in the model! Based off of that one fact alone it can get a third of its predictions exactly right, but not through any insight that it sees in the data that we can't, rather through plain and simple mathematics. zero is zero, great, thanks, wonderful work.
+Given all of this, of course the number of ratings is weighted so heavily in the model! Based off of that one fact alone it can get a third of its predictions exactly right, but not through any insight that it sees in the data that we can't, rather through plain and simple mathematics. Zero is zero, great, thanks, wonderful work.
 
-So, what happens when we remove all of those obvious zeroes from the dataset and train the model on that? Well, here's what the new permutation matrix looks like:
+So, what happens when we remove all of those obvious zeroes from the dataset and train the model on what's left? Well, here's what the new permutation matrix looks like:
 
 ![Permutation 2.0](/img/BoardGamePermutationMatrix2.0.png)
 

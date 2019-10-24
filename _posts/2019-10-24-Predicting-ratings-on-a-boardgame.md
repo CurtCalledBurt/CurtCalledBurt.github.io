@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Data Visualizations in Machine Learning: The Wrong Way and The Right Way
-image: /img/BoardGamePostImage.png
+title: Flake it till you make it
+subtitle: Excerpt from Soulshaping by Jeff Brown
+bigimg: /img/path.jpg
+tags: [books, test]
 ---
 
 Since messing with the boardgame dataset from last time, I have discovered that the original purpose of the dataset was to train a computer to predict how highly users would rate each game. Now knowing that, and also having recently learned how to train a computer to do look at datasets such as this and make predictions from it, I decided to try my hand at using the data for its original purpose.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualizations in Machine Learning: The Right Way vs. the Wrong Way
+title: Visualizations in Machine Learning
 image: /img/owners_singleplayer_histogram.png
 ---
 

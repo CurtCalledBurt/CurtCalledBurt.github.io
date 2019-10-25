@@ -28,7 +28,7 @@ Now ask yourself why that makes sense. Because that's what I did, and this is wh
 
 The number of people who rated a game probably correlates to how many people own the game and therefore can be used as a measure of how popular it is, and if a game is popular (outside of the hopefully dying exceptions of Risk and Monopoly, man are those games terribly designed) it's probably good, and therefore will probably have a high rating. It's not often that a lot of people both own something and detest it at the same time after all. The thing, we already knew how many people owned the game! That was data the computer had, and the computer decided to ignore it! Looking back at the table, it's not even in the top 5! It's 7th out of 14!
 
-That was my justification for that table I just showed you. My thinking was long, convuluted, and made a bunch of assumptions that I had no data to back. Bad, bad, bad practise all around.
+That was my justification for that table I just showed you. My thinking was long, convoluted, and made a bunch of assumptions that I had no data to back. Bad, bad, bad practise all around.
 
 And I never questioned this! I saw that table and thought, "Huh, that's weird, how cool!" I had my explanation and was happy with that. Especially because it confirmed a few of my own biases. The main one here is I don't like rating systems. This will become relevant later. 
 

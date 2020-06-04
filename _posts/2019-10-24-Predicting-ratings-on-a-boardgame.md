@@ -5,7 +5,7 @@ subtitle: The Wrong Way and then the Right Way
 image: /img/BoardGamePostImage.png
 ---
 
-Since messing around with the boardgame dataset from last time, I since have discovered that its original purpose was to train a computer to predict how highly users would rate each game. Knowing that, and also having recently learned how to train a computer to look at datasets such as this and make predictions from it, I decided to try my hand at using the data for its original purpose.
+Since messing around with the boardgame dataset from last time, I have since discovered that its original purpose was to train a computer to predict how highly users would rate each game. Knowing that, and also having recently learned how to train a computer to look at datasets such as this and make predictions from it, I decided to try my hand at using the data for its original purpose.
 
 Now, it is actually fairly easy to get a machine to make predictions like this that are reasonably accurate. Even if you have no idea what you're doing, if you can figure out how to code, you can have one of these models up and running pretty quickly. Much more difficult is figuring out HOW the computer model is making those predictions. There are whole libraries in various computer languages dedicated exclusively to visually expressing what the computer is doing when it says "X boardgame will have an average rating of Y." Picking the correct visualization is key to understanding what a model is doing and picking the wrong one can be disastrous to your understanding of the data.
 

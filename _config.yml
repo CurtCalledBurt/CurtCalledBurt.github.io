@@ -71,7 +71,7 @@ social-network-links:
   email: "curtis.w.mckendrick@gmail.com"
 #   facebook: deanattali
   github: CurtCalledBurt
-#   twitter: daattali
+#  twitter: daattali
 #  reddit: yourname
  linkedin: curtis-mckendrick-168008195
 #  xing: yourname
@@ -87,8 +87,8 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-#   twitter: true
-#   facebook: true
+  twitter: true
+  facebook: true
   linkedin: true
 
 # How to display the link to the website in the footer

@@ -69,7 +69,7 @@ Look at how many games have 0 ratings (technically this one shows all values clo
 So the most common average rating is 0, and the most common number of raters is 0.
 
 Going into this in a more exact fashion we see that the total number of games with a 0 average rating is 24361.
-We then count up the number of games with no ratings at all and how many do we find? 24361.
+We then count up the number of games with no ratings at all how many do we find? Also 24361.
 
 Well isn't that suspicious! Why are these numbers EXACTLY the same? Because the average rating of a game that has no ratings at all defaults to 0!
 

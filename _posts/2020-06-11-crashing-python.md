@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "Python has Crashed": An Adventure through the Most Useless of Error Messages
 image: ### picture of "python has crashed" error message, or maybe of the spider plot

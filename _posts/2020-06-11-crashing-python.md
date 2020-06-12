@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Python has Crashed": An Adventure through the Most Useless of Error Messages
+title: "Python has Crashed" 
+subtitle: An Adventure through the Most Useless of Error Messages
 image: /img/SpiderPlot2.png
 ---
 

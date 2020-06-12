@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python has Crashed": An Adventure through the Most Useless of Error Messages
-image: ### picture of "python has crashed" error message, or maybe of the spider plot
+image: /img/SpiderPlot2.png
 ---
 
 This is a story of how sometimes something you think is going to be simple to do in a computer ends up being horribly complicated and frustrating... and (debatably) not worth the effort.

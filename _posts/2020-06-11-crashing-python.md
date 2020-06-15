@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "python3 quit unexpectedly"
-subtitle: An Adventure through the Most Useless of Error Messages
+subtitle: An Adventure Through the Most Useless Error Message
 image: /img/SpiderPlot2.png
 ---
 

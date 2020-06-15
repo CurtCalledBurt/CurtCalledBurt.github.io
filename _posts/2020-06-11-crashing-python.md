@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "python3 quit unexpectantly"
+title: Error: "python3 quit unexpectantly"
 subtitle: An Adventure through the Most Useless of Error Messages
 image: /img/SpiderPlot2.png
 ---
